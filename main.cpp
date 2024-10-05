@@ -65,7 +65,6 @@ int binary_search (std::vector<std::string> thing, std::string element) {
             thing.assign(thing.begin()+middle, thing.end());
             count += middle;
 
-            //thing.begin()
         }
         else {
             thing.assign(thing.begin(), thing.begin()+middle);
@@ -76,19 +75,57 @@ int binary_search (std::vector<std::string> thing, std::string element) {
     int main()
     {
         std::vector mainData=getStringData();
+        long long start = systemTimeNanoseconds();
+        std::cout<< "linear search. index for not_here: "<<linear_search(mainData, "not_here") << "\n";
+        long long end = systemTimeNanoseconds();
+        long long final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
 
-        std::cout<<linear_search(mainData, "mzzzz");
+        start = systemTimeNanoseconds();
+        std::cout<< "binary search. index for not_here: " << binary_search(mainData, "not_here") << "\n";
+        end = systemTimeNanoseconds();
+        final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
 
-        std::cout<<binary_search(mainData, "mzzzz");
+
+        start = systemTimeNanoseconds();
+        std::cout<< "linear search. index for mzzzz: "<<linear_search(mainData, "mzzzz") << "\n";
+        end = systemTimeNanoseconds();
+        final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
+
+        start = systemTimeNanoseconds();
+        std::cout<< "binary search. index for mzzzz: " << binary_search(mainData, "mzzzz") << "\n";
+        end = systemTimeNanoseconds();
+        final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
+
+
+        start = systemTimeNanoseconds();
+        std::cout<< "linear search. index for aaaaa: "<<linear_search(mainData, "aaaaa") << "\n";
+        end = systemTimeNanoseconds();
+        final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
+
+        start = systemTimeNanoseconds();
+        std::cout<< "binary search. index for aaaaa: " << binary_search(mainData, "aaaaa") << "\n";
+        end = systemTimeNanoseconds();
+        final = end - start;
+        std::cout << final  << " nanoseconds elapsed \n";
+
 
         return -1;
     }
 
 
-//  std::chrono::system_clock::now()
+/*
+ * What to submit:
+ *      add analyzer.py
+ *      add a read me
+ *      submit screenshot
+ *      submit link
+ *
+ *
+ */
 
 
-/*int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}*/
