@@ -118,14 +118,6 @@ int binary_search (std::vector<std::string> thing, std::string element) {
     }
 
 
-/*
- * What to submit:
- *      add analyzer.py
- *      add a read me
- *      submit screenshot
- *      submit link
- *
- *
- */
+
 
 
