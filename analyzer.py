@@ -76,18 +76,32 @@ def time_measurer(func_choice, input_data, searcher):
 def main():
     string_data = get_data()
     knowledge=[]
-
+    print("not_here Linear search")
     knowledge.append(time_measurer(linear_search, string_data, "not_here"))
+    print("Index: "+ str(knowledge[len(knowledge)-1]))
     newContainer = string_data
-    knowledge.append(time_measurer(binary_search, newContainer, "not_here"))
 
+    print("not_here Binary search")
+    knowledge.append(time_measurer(binary_search, newContainer, "not_here"))
+    print("Index: "+ str(knowledge[len(knowledge)-1]))
+
+    print("mzzzz Linear search")
     knowledge.append(time_measurer(linear_search, string_data, "mzzzz"))
     newContainer = string_data
-    knowledge.append(time_measurer(binary_search, newContainer, "mzzzz"))
+    print("Index: " + str(knowledge[len(knowledge) - 1]))
 
+    print("mzzzz Binary search")
+    knowledge.append(time_measurer(binary_search, newContainer, "mzzzz"))
+    print("Index: " + str(knowledge[len(knowledge) - 1]))
+
+    print("aaaaa Linear search")
     knowledge.append(time_measurer(linear_search, string_data, "aaaaa"))
+    print("Index: " + str(knowledge[len(knowledge) - 1]))
     newContainer = string_data
+
+    print("aaaaa Binary search")
     knowledge.append(time_measurer(binary_search, newContainer, "aaaaa"))
+    print("Index: " + str(knowledge[len(knowledge) - 1]))
 
     """
     #For testing purposes:
