@@ -69,7 +69,7 @@ def time_measurer(func_choice, input_data, searcher):
     location = func_choice(input_data, searcher)
     end_time = time.time()
     print(end_time - start_time)
-    return end_time - start_time
+    return location
 
 
 
